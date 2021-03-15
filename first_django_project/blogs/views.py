@@ -1,7 +1,5 @@
-# add redirect to import statement
 from django.shortcuts import HttpResponse, redirect, render
 from django.http import JsonResponse
-# Create your views here.
 
 
 def root(request):
@@ -9,7 +7,12 @@ def root(request):
 
 
 def index(request):
-    return HttpResponse("placeholder to later display a list of all blogs")
+    context = {
+        "name": "Gary",
+        "favorite_color": "Orange",
+        "kids": ["Avianna", "Gavin"]
+    }
+    return render(request, "index.html", context)
 
 
 def new(request):

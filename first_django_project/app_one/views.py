@@ -2,4 +2,9 @@ from django.shortcuts import render, HttpResponse
 
 
 def index(request):
-    return HttpResponse("placeholder to hold a list of all blogs")
+    context = {
+        "name" = "Gary",
+        "favorite_color" = "orange",
+        "kids" = ["Avianna", "Gavin"]
+    }
+    return render(request, "index.html")
