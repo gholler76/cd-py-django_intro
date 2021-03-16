@@ -1,0 +1,33 @@
+html, body {
+    font-family: sans-serif;
+    padding: 1rem;
+    margin: .5rem;
+    /* border: 1px solid pink; */
+}
+
+h1 {
+    text-align: center;
+    padding: .5rem;
+}
+
+h3 {
+    text-align: center;
+    font-weight:bold;
+    font-size: 2em;
+}
+
+.margin {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.radius {
+    border-radius: 10px;
+}
+.result {
+    text-align: left;
+    font-size: 1.6em;
+}
+

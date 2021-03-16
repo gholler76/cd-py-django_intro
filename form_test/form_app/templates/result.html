@@ -9,27 +9,29 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title></title>
-    <style>
-        * {
-            margin: 1rem;
-            padding: .5rem;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row  justify-contents-center ">
-            <div class="col-2 bg-light">
-                <h4 class="font-weight-bolder">The current time and date:</h4>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-3 bg-dark">
-                    <h2 class="font-weight-bold">{{ date }}<br>{{ time }}</h2>
+        <div class="row justify-content-center bg-dark text-white">
+            <h1>Results</h1>
+        </div>
+        <div class="row justify-content-left bg-light margin">
+            <div class="form-group">
+                <div class="col-4">
+                    <h3 class="result">Name: {{ result_name }}</h3>
+                    <h3 class="result">Instructor: {{ result_instr }}</h3>
+                    <h3 class="result">Favorite Stack: {{ result_stack }}</h3>
+                    <h3 class="result">Opportunities: {{ result_opp }}</h3>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
 
 
 

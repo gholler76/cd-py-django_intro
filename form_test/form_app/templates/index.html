@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title></title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center bg-dark text-white">
+            <h1>Index Page</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 bg-info margin ">
+                <h3>Dojo Survey</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6 bg-light margin">
+                <form action='/users' method='post' class="margin">
+                    {% csrf_token %}
+                    <div class="form-group margin">
+                        <label for="Name" class="form-label">Student Name</label>
+                        <input type="text" class="form-control" name="form_name" placeholder="Enter name here">
+                    </div>
+                    <select class="custom-select margin" name="form_instructor">
+                        <option selected="">Who was your instructor?</option>
+                        <option value="Moe">Moe</option>
+                        <option value="Narciso">Narciso</option>
+                        <option value="Larry">Larry</option>
+                        <option value="Curly">Curly</option>
+                    </select>
+                    <div class=" form-group margin custom-control-label margin" for="stack-radio-header">What was your
+                        favorite stack in
+                        the Dojo?</div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="Python" name="form_stack_radio" value="Python"
+                            class="custom-control-input">
+                        <label class="custom-control-label" for="Python">Python</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="MERN" name="form_stack_radio" value="MERN" class="custom-control-input">
+                        <label class="custom-control-label" for="MERN">MERN</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="Java" name="form_stack_radio" value="Java" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio3">Java</label>
+                    </div>
+                    <div class="form-group custom-control custom-checkbox">
+                        <div class=" form-group custom-control-label margin" for="checkbox-header">What
+                            opportunities do you think coding will now open up for you? (check all that apply)</div>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" name="form_opp_checkbox"
+                            value="New Career">
+                        <label class="custom-control-label" for="customCheck1">New Career</label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="Side Hustle"
+                            name="form_opp_checkbox">
+                        <label class="custom-control-label" for="customCheck1">Side Hustle</label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value=" Personal
+                        Projects" name="form_opp_checkbox">
+                        <label class="custom-control-label" for="customCheck1">Personal
+                            Projects</label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value=" Start a New
+                        Business " name="form_opp_checkbox">
+                        <label class="custom-control-label" for="customCheck1">Start a New
+                            Business</label>
+                    </div>
+                    <button type="submit" class="btn-primary margin btn-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
