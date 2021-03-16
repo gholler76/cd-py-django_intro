@@ -11,7 +11,7 @@ def create_user(request):
     post_name = request.POST['form_name']
     post_instructor = request.POST['form_instructor']
     post_stack_radio = request.POST['form_stack_radio']
-    post_opp_checkbox = request.POST['form_opp_checkbox.value']
+    post_opp_checkbox = request.POST['form_opp_checkbox']
     context = {
         "result_name": post_name,
         "result_instr": post_instructor,
