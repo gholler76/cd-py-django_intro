@@ -28,8 +28,6 @@
             <div class="form-group">
                 <form action="/guess" method="post">
                     {% csrf_token %}
-                    <!-- <input type="text" name="guess" class="guess-form" placeholder="Enter your guess here">
-                    </input><br class="space"> -->
                     {{ submit | safe }}
                 </form>
             </div>
